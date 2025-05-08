@@ -310,3 +310,24 @@ footer {
     padding: 1.5rem;
     border-radius: 10px;
 }
+
+.research {
+    background-color: var(--primary-color);
+    padding: 3rem 2rem;
+    color: white;
+    text-align: center;
+    margin-top: 2rem;
+    border-radius: 10px;
+}
+
+.research h2 {
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+}
+
+.research p {
+    font-size: 1.2rem;
+    max-width: 800px;
+    margin: 0 auto;
+    line-height: 1.6;
+}
