@@ -1,4 +1,3 @@
-
 document.addEventListener('DOMContentLoaded', () => {
   // FAQ Interaction
   const faqItems = document.querySelectorAll('.faq-item');
@@ -9,8 +8,6 @@ document.addEventListener('DOMContentLoaded', () => {
     answer.style.display = 'none';
     question.addEventListener('click', () => {
       const isOpen = answer.style.display === 'block';
-
-
 
       document.querySelectorAll('.faq-answer').forEach(a => {
         a.style.display = 'none';
@@ -29,23 +26,25 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 
+  // Play Button Interaction
   const playButton = document.querySelector('.play-button');
   playButton.addEventListener('click', () => {
     window.open('https://scratch.mit.edu/projects/1171645176/', '_blank');
-
   });
 
+  // Account Button Interaction for Creators
   const ayaanButton = document.querySelector('.ayaan');
   const joeButton = document.querySelector('.joe');
   const jackeyButton = document.querySelector('.jackey');
 
-  const ayaanText = "Ayaan is one of the visionary co-creators of Turbo's Hungry. He played a pivotal role in both coding and design, showcasing his remarkable talent as a developer and creative designer. Beyond his technical contributions, Ayaan is a close friend of Joe, the game's other co-creator. He also singlehandedly designed and developed the game's official website—a fully functional and visually engaging platform that beautifully complements the gameplay experience. Ayaan struggled with the CSS of the website due to his perfectionism, as he wanted every detail to be just right.";
+  // Updated Struggles of Creators
+  const ayaanText = "Ayaan is one of the visionary co-creators of *Muscle Man is Hungry*. He led the website and game design with precision and creativity, shaping a vibrant experience that celebrates teamwork and nutrition. Ayaan struggled with the CSS of the website due to his perfectionism, as he wanted every detail to be just right, especially ensuring that Muscle Man’s look and feel matched his heroic persona.";
+  
+  const joeText = "Joe is the brilliant coder behind *Muscle Man is Hungry*. He built the game from the ground up, especially focusing on Muscle Man's animations and movements. Joe struggled with debugging complex issues in Scratch, as the tool wasn’t ideal for such detailed animations, and he faced frustrations with the inconsistencies in how the game’s environment was rendered.";
+  
+  const jackeyText = "Jake is the creative mastermind behind the adorable Evan the Cat and the dynamic game environments. He designed the levels where Muscle Man must navigate obstacles to collect magical protein. Jake struggled with communication at times, as coordinating between the art and coding teams proved difficult, but the result was a visually stunning game that perfectly complemented the gameplay experience.";
 
-  const joeText = "Joe is one of the brilliant co-creators of Turbo's Hungry and served as the game's primary architect. He built the game from the ground up, pouring his exceptional coding and design skills into every detail. A dedicated innovator, Joe spent countless hours debugging and refining the game to ensure an engaging and polished experience. He shares a strong friendship with Ayaan, reflecting the project's collaborative spirit. Joe struggled with Scratch due to its inconsistencies and lack of robust bug support.";
-
-  const jackeyText = "Jake is the creative mind behind the game's background art. He is also a close friend of Ayaan and Joe. Jake struggled with communication with the other two creators, which posed challenges during the development process.";
-
-  // Create modal element
+  // Modal Creation
   const modal = document.createElement('div');
   modal.className = 'modal';
   document.querySelector('.account').appendChild(modal);
@@ -59,6 +58,7 @@ document.addEventListener('DOMContentLoaded', () => {
     modal.classList.remove('active');
   }
 
+  // Event listeners for Creator Buttons
   ayaanButton.addEventListener('click', () => {
     hideModal();
     showModal(ayaanText);
